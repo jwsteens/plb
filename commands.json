@@ -1,0 +1,21 @@
+{
+    "help": "Show all commands to this bot.",
+
+    "cmds": "Show all commands to this bot.",
+
+    "logpatrol": "Log your hours and minutes\nSyntax: `{prefix}logpatrol [username] (hours) [minutes]`",
+
+    "checktime": "Check anyone's logged time.\nSyntax: `{prefix}checktime [username]`",
+
+    "checkentries": "Check anyone's log entries.\nSyntax: `{prefix}checkentries [username]`",
+
+    "deleteentry": "Delete an entry.\nSyntax: `{prefix}deleteentry [username] [entrynumber]`\nYou can check the entrynumber with checkentries.",
+
+    "deletelogs": "Completely remove someone's entries from the database.\nSyntax: `{prefix}deletelogs [username]`",
+
+    "deletealllogs": "Permanently deletes ALL logs from ALL users.\nSyntax: `{prefix}deletealllogs`",
+
+    "alllogs": "View all logs in the system.",
+
+    "info": "View all info about the bot."
+}

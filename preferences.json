@@ -1,0 +1,13 @@
+{
+  "prefix": "!",
+  "version": "1.3.4",
+  "moderatorrole": "Patrol bot access",
+  "botlogchannelid": "",
+  "datadirectory": "logdata",
+  "color": "206694",
+  "activities": true,
+  "restart": false,
+  "owners": [
+    ""
+  ]
+}

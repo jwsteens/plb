@@ -1,0 +1,38 @@
+CHANGELOG
+---
+
+1.0.1 -- 08/07/2020
+First working version
+
+1.2.1 -- 14/07/2020
++ preferences.json
++ commands.json
++ First Bot Activity
++ Prefix reply when pinged
++ Dynamic prefix in reply when wrong command used (not `!logpatrol [name] (time)` when prefix was .)
++ Checkentries/checklogs
++ Shows logged amount when trying to delete an entry
++ Exits when too many args are given
++ alllogs
+
+1.3.0 -- 14/07/2020
++ More activities & automatic cycle
++ Expanded info menu
+
+1.3.1 -- UNK
++ Fixed double space issue
++ Fixed typo
+- File lost...
+
+1.3.2 -- 12/10/2020
++ Error message now has red embed
+- Fixed deleteentry bug where it crashes when a file does not exists
+
+1.3.3 -- 13/10/2020
++ Added integrated restart/shutdown/pid commands
++ Shutdown, restart and startup have yellow embed color
++ Everything should have error handling? I think
+
+1.4.0 -- 14/10/2020
++ Made preferences dynamic. Does not load in at start of file, but properties get retrieved from the file everytime when called
++ Made Brandweer version, which was easily done due to futureproofing
