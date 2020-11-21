@@ -39,5 +39,6 @@ When you have set up the bot, you can use !help (or whatever your prefix is) to 
 Two commands are not listed, but are available.
 - **pid**: This returns the Process ID of the script. Useful if you need to track down the process!
 - **shutdown**: This command is only available to **owners** (as mentioned in *preferences.json*). Speaks for itself right?
+- **restart**: Shuts the bot down and restarts it.
 
 ### Do you have questions/problems? Feel free to shoot me a DM on Discord! @willem#1111
