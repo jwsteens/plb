@@ -29,7 +29,7 @@ To make this bot all yours, here are some preferences you might want to change:
 - **moderatorrole**: The name of the role with which you can perform certain administrative tasks, such as clearing all the logs.
 - **botlogchannelid**: The ID of the channel in which you want the bog to call all actions performed. Retrieve this ID by turning on *developer mode* on Discord, right clicking a channel and copying the channel ID.
 - **color**: The color of the embeds. The default is a navy blue color. [This is a hex code.](https://www.google.com/search?q=color+picker)
-- **activities**: Setting this to true will have the bot put 'funny' messages in it's player menu. These activities can be added/changed/removed in *activities.json*. Not a fan of this feature? Just write 'false' and the activities won't show up.
+- **activities**: Setting this to true will have the bot put 'funny' messages in it's player menu. These activities can be added/changed/removed in *activities.json*. Not a fan of this feature? Just write 'false' and the activities won't show up.  
 ![](images/screenshot3.png)
 - **owners**: A table of user IDs. This has the same purpose as **moderatorrole**, except you don't need to have the role, thus access can never be restricted to these people, unless changed in the *preferences.json* file. You can retrieve a user ID by enabling *Developer Mode* and right clicking on a user, then copying the User ID. Make sure to copy this into the quotes, and to use commas when using multiple values!
 
