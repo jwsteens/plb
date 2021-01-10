@@ -2,6 +2,7 @@
 
 By Me  
 @willem#1111
+Version 1.4.1
   
 ## Introduction
 ### What does this bot do?
