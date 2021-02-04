@@ -34,6 +34,15 @@ To make this bot all yours, here are some preferences you might want to change:
 ![](images/screenshot3.png)
 - **owners**: A table of user IDs. This has the same purpose as **moderatorrole**, except you don't need to have the role, thus access can never be restricted to these people, unless changed in the *preferences.json* file. You can retrieve a user ID by enabling *Developer Mode* and right clicking on a user, then copying the User ID. Make sure to copy this into the quotes, and to use commas when using multiple values!
 
+### Activities
+The bot automatically selects a random activity from *activities.json* 4 times a day. You can change these activities manually. Restarting the bot is not necessary. The actual activity can be anything you like. The type of activity must be one of the following (Discord limitation):
+- PLAYING
+- STREAMING
+- LISTENING
+- WATCHING
+- CUSTOM_STATUS
+- COMPETING
+
 ### Commands
 When you have set up the bot, you can use !help (or whatever your prefix is) to view all the commands you can use for the bot.  
   
