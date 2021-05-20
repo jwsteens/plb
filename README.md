@@ -51,4 +51,4 @@ Two commands are not listed, but are available.
 - **shutdown**: This command is only available to **owners** (as mentioned in *preferences.json*). Speaks for itself right?
 - **restart**: Shuts the bot down and restarts it.
 
-### Do you have questions/problems? Feel free to shoot me a DM on Discord! @willem#1111
+### Do you have questions/problems? Feel free to shoot me a DM on Discord! @willem#5819
