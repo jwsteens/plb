@@ -3,6 +3,7 @@ const cron = require("node-cron");
 const bot = new Discord.Client();
 const fs = require('fs');
 const process = require('process');
+const http = require("superagent");
 
 const token = JSON.parse(fs.readFileSync("token.json"));
 
@@ -132,7 +133,7 @@ cron.schedule("0 0,8,14,20 * * *", () => {
     updateactivity();
 });
 
-bot.on('message', (message) => { // Fires whenever new message is sent in channel
+bot.on('message', async (message) => { // Fires whenever new message is sent in channel
 
     if (message.content == `<@!${bot.user.id}>`) {
         message.channel.send(`My prefix is \`${preferences().prefix}\`. Run \`${preferences().prefix}cmds\` to see what I am capable of.`);
@@ -149,7 +150,42 @@ bot.on('message', (message) => { // Fires whenever new message is sent in channe
         }
     }
 
-    const username = args[1];
+    // We don't set the username directly so we can still
+    // check for errors without the program assuming the name
+    // exists and is correct.
+    let username = null;
+
+    // Fetch the username from the Roblox API. If the user forgot to
+    // make characters uppercase, this automatically corrects that.
+    await http
+        // https://api.roblox.com/docs#Users
+        .get(`https://api.roblox.com/users/get-by-username?username=${args[1]}`)
+        .then(response => {
+            // Check if the username exists.
+            if (response.success != undefined && !response.success) {
+                // The username does not exist. Stop the command
+                // since users cannot log patrols for users that
+                // don't exist.
+                message.channel.send("That user does not exist. Please check the name and try again.");
+                return;
+            }
+
+            // The username exists. Set the username.
+            username = response.body.Username;
+        })
+        .catch(error => {
+            console.error(error);
+            message.channel.send("Something went wrong while processing your name. Please try again.");
+            return;
+        });
+
+    // Something went wrong. This should only be reached when
+    // no one with that username exists on Roblox.
+    if (!username) {
+        message.channel.send("Something went wrong while processing your name. Please try again.");
+        return;
+    }
+
     const filter = msg => msg.author.id === message.author.id;
     var sendmessage = new Discord.MessageEmbed();
 
